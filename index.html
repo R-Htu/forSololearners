@@ -14,9 +14,26 @@
 
     
 </head>
-<body class="leading-relaxed">
+<body class=" bg-white dark:bg-gray-950 dark:text-white">
     <button onclick="toggleTheme()" id="iconBtn" class="bg-gray-950 shadow-lg m-2 text-white dark:text-black dark:bg-gray-300 rounded-full h-7 w-12"><i class="fa-solid fa-moon"></i></button>
     <h1>Hey hey :)</h1>
+
+  <button
+    id="togglePlus"
+    class="absolute right-7 top-7 w-[20%] shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] bg-black text-white dark:bg-gray-200 dark:text-black border rounded shadow focus:outline-none"
+    aria-pressed="true"
+    title="Toggle plus sign"
+  > ⊂(◉‿◉)つ
+    <!-- Horizontal line -->
+    <div id="hLine"
+      class="absolute h-0.5 bg-blue-600 top-1/2 left-0 origin-center transition-all duration-500 w-full"
+    ></div>
+    <!-- Vertical line -->
+    <div id="vLine"
+      class="absolute w-0.5 bg-blue-600 top-0 left-1/2 -translate-x-1/2 origin-center transition-all duration-500 h-full"
+    ></div>
+  </button>
+    
     <script src="script.js"></script>
 
 </body>
