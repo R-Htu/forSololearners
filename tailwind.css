@@ -5,7 +5,7 @@
 @layer components {
   .btn-responsive {
     @apply absolute right-7 top-7 
-           w-[30%] md:w-[25%] lg:w-[10%] 
+           w-[30%] md:w-[25%] lg:w-[15%] 
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
            bg-black text-white 
            dark:bg-gray-200 dark:text-black 
@@ -16,16 +16,17 @@
   }
 
   .hor-line {
-    @apply absolute h-0.5 bg-blue-600 
+    @apply absolute h-5 bg-green-600 
            top-1/2 left-0 origin-center 
            transition-all duration-500 
+           opacity-30 -translate-y-1/2
            
   }
 
 .ver-line {
-    @apply absolute w-0.5 bg-blue-600 
+    @apply absolute w-4 bg-green-600 
            top-0 left-1/2 -translate-x-1/2 
            origin-center transition-all 
-           duration-500
+           duration-500 opacity-30
   }
 }
