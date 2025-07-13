@@ -37,18 +37,27 @@ function toggleTheme() {
       '(¬_¬")︻╦╤─'
     ];
 
-
+    
     button.addEventListener('click', () => {
+       const emoji = button.querySelector('.emoji');
+      const symbol = button.querySelector('.emoji-symbol');
         if (isOpen) {
+          
           ///|\ ^._.^ /|\ Shrink lines
           hLine.classList.replace('w-full', 'w-0');
           vLine.classList.replace('h-full', 'h-0');
-          button.textContent = `${myGuns[Math.floor(Math.random()*myGuns.length)]}`;
+
+          symbol.classList.add('hidden');
+          emoji.textContent = myGuns[Math.floor(Math.random() * myGuns.length)];
+          emoji.classList.remove('hidden');
           
         } else {
            // ┌( ͝° ͜ʖ͡°)=ε/̵͇̿̿/’̿’̿ ̿   Expand lines
           hLine.classList.replace('w-0', 'w-full');
           vLine.classList.replace('h-0', 'h-full');
+
+          symbol.classList.remove('hidden');
+          emoji.classList.add('hidden');
         }
         button.setAttribute('aria-pressed', !isOpen);
         isOpen = !isOpen;
