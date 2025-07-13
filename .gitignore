@@ -10,6 +10,3 @@ Thumbs.db
 
 # Optional: VSCode project settings
 .vscode/
-
-public/style.css
-tailwind.css
