@@ -5,7 +5,6 @@
 @layer components {
   .btn-responsive {
     @apply 
-           w-[30%] md:w-[25%] lg:w-[15%] 
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
            bg-black text-white 
            dark:bg-gray-200 dark:text-black 
@@ -32,7 +31,7 @@
   }
 
   .theme-text {
-    @apply text-xs md:text-xl lg:text-2xl;
+    @apply text-xs;
 }
 
 }
