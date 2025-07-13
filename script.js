@@ -16,22 +16,45 @@ function toggleTheme() {
       }
     }
 
-     const hLine = document.getElementById('hLine');
-    const vLine = document.getElementById('vLine');
-    const button = document.getElementById('togglePlus');
 
+    document.querySelectorAll('.btn-responsive').forEach(button => {
+    const hLine = button.querySelector('.hor-line');
+    const vLine = button.querySelector('.ver-line');
     let isOpen = true;
 
+    const myGuns = [
+      '(⌐■_■)–︻╦╤─',
+      '(☞ﾟ∀ﾟ)☞︻╦̵̵͇̿̿̿̿╤──',
+      '︻デ═一',
+      '▄︻̷̿┻̿═━一',
+      '╾━╤デ╦︻',
+      '( ͡° ͜ʖ ͡°)╭∩╮︻╦╤─',
+      '(▀̿Ĺ̯▀̿ ̿)︻̷̿┻̿═━一 BANG!',
+      '(╯°□°）╯︵ ┻━┻︻デ═一',
+      '(⌐■_■)–︻╦╤─ Pew Pew!',
+      "(ง'̀-'́)ง︻デ═一",
+      '(•_•) /︻╦̵̵͇̿̿̿̿╤──',
+      '(¬_¬")︻╦╤─'
+    ];
+
+
     button.addEventListener('click', () => {
-      if (isOpen) {
-        ///|\ ^._.^ /|\ Shrink lines
-        hLine.classList.replace('w-full', 'w-0');
-        vLine.classList.replace('h-full', 'h-0');
-      } else {
-        // ┌( ͝° ͜ʖ͡°)=ε/̵͇̿̿/’̿’̿ ̿   Expand lines
-        hLine.classList.replace('w-0', 'w-full');
-        vLine.classList.replace('h-0', 'h-full');
-      }
-      button.setAttribute('aria-pressed', !isOpen);
-      isOpen = !isOpen;
+        if (isOpen) {
+          ///|\ ^._.^ /|\ Shrink lines
+          hLine.classList.replace('w-full', 'w-0');
+          vLine.classList.replace('h-full', 'h-0');
+          button.textContent = `${myGuns[Math.floor(Math.random()*myGuns.length)]}`;
+          
+        } else {
+           // ┌( ͝° ͜ʖ͡°)=ε/̵͇̿̿/’̿’̿ ̿   Expand lines
+          hLine.classList.replace('w-0', 'w-full');
+          vLine.classList.replace('h-0', 'h-full');
+        }
+        button.setAttribute('aria-pressed', !isOpen);
+        isOpen = !isOpen;
+        });
     });
+
+
+
+  
