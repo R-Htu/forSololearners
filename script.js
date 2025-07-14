@@ -64,6 +64,49 @@ function toggleTheme() {
         });
     });
 
+   
+
+const leafBtn = document.getElementById('leafBtn');
+const leafIcon = document.getElementById('leafIcon');
+
+let isAutumn = false;
+
+leafBtn.addEventListener('click', ()=> {
+
+  isAutumn = !isAutumn;
+  const allseasonBg = document.querySelectorAll('.season-bg');
+
+  allseasonBg.forEach(el=>{
+    
+    el.classList.remove(isAutumn ? 'spring-mode' : 'autumn-mode');
+    el.classList.add(isAutumn ? 'autumn-mode' : 'spring-mode');
+  });
+
+  leafIcon.textContent = isAutumn ? "🍁" : "🍀";
+  
+})
+
+/*leafBtn.addEventListener('click', () => {
+  document.body.classList.remove(
+    'bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]',
+    'bg-cover',
+    'bg-center',
+    'min-h-screen',
+    'rounded-lg',
+    'shadow-lg'
+  );
+
+  document.body.classList.add(
+    'bg-[linear-gradient(rgba(255,77,0,0.4),rgba(252,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]',
+    'bg-cover',
+    'bg-center',
+    'min-h-screen',
+    'rounded-lg',
+    'shadow-lg'
+  );
+});
+*/
+
 
 
   

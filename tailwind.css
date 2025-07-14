@@ -3,8 +3,19 @@
 @tailwind utilities;
 
 @layer components {
+  .spring-mode {
+    @apply  bg-[linear-gradient(rgba(0,90,0,0.4),rgba(0,0,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg')]
+            bg-cover bg-center min-h-screen
+            rounded-lg shadow-lg;
+  }
+
+  .autumn-mode {
+    @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(200,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
+           bg-cover bg-center min-h-screen rounded-lg shadow-lg;
+  }
+
   .btn-responsive {
-    @apply w-[33%] h-[5%]
+    @apply w-[33%] min-h-[5%]
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
            bg-black text-white 
            dark:bg-gray-200 dark:text-black 
@@ -16,7 +27,7 @@
   }
 
   .hor-line {
-    @apply absolute h-4 bg-green-600 
+    @apply absolute h-4 bg-gray-600 
            top-1/2 left-0 origin-center 
            transition-all duration-500 
            opacity-30 -translate-y-1/2
@@ -24,7 +35,7 @@
   }
 
 .ver-line {
-    @apply absolute w-4 bg-green-600 
+    @apply absolute w-4 bg-gray-700 
            top-0 left-1/2 -translate-x-1/2 
            origin-center transition-all 
            duration-500 opacity-60
@@ -33,5 +44,6 @@
   .theme-text {
     @apply text-base md:text-lg lg:text-xl;
 }
+
 
 }

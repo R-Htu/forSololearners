@@ -9,5 +9,9 @@ module.exports = {
   theme: {
     extend: {},
   },
+  safelist: [
+    'sping-mode',
+    'autumn-mode'
+  ],
   plugins: [],
 }
