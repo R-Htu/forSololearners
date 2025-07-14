@@ -4,19 +4,19 @@
 
 @layer components {
   .btn-responsive {
-    @apply 
+    @apply w-[33%] h-[5%]
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
            bg-black text-white 
            dark:bg-gray-200 dark:text-black 
            rounded transition-all duration-300 
-           hover:scale-105 hover:bg-gray-500 
+           hover:scale-105 hover:bg-white 
            hover:text-black dark:hover:text-white
-           dark:hover:bg-gray-700
+           dark:hover:bg-gray-800
             focus:outline-none;
   }
 
   .hor-line {
-    @apply absolute h-4 bg-yellow-600 
+    @apply absolute h-4 bg-green-600 
            top-1/2 left-0 origin-center 
            transition-all duration-500 
            opacity-30 -translate-y-1/2
@@ -24,14 +24,14 @@
   }
 
 .ver-line {
-    @apply absolute w-4 bg-yellow-600 
+    @apply absolute w-4 bg-green-600 
            top-0 left-1/2 -translate-x-1/2 
            origin-center transition-all 
            duration-500 opacity-60
   }
 
   .theme-text {
-    @apply text-xs;
+    @apply text-base md:text-lg lg:text-xl;
 }
 
 }
