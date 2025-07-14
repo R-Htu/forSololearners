@@ -579,9 +579,10 @@ video {
 .btn-responsive {
   width: 33%;
   border-radius: 0.25rem;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.7);
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
   --tw-shadow: -4px 4px 10px rgba(0,0,0,0.2);
   --tw-shadow-colored: -4px 4px 10px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -591,12 +592,12 @@ video {
 }
 
 .btn-responsive:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.6);
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .btn-responsive:focus {
@@ -605,13 +606,15 @@ video {
 }
 
 .btn-responsive:is(.dark *) {
-  background-color: rgba(40,40,0,0.7);
+  background-color: rgba(0,0,0,0.7);
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .btn-responsive:hover:is(.dark *) {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(250,250,250,0.8);
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .hor-line {
@@ -779,29 +782,24 @@ video {
   line-height: 1.5rem;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-.text-yellow-700 {
+.text-gray-900 {
   --tw-text-opacity: 1;
-  color: rgb(161 98 7 / var(--tw-text-opacity, 1));
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
 }
 
 .shadow-lg {
