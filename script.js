@@ -8,11 +8,11 @@ function toggleTheme() {
 
       // ☜(⌒▽⌒)☞ Change the icon
       if (isDark) {
-        icon.classList.remove('fa-sun');
-        icon.classList.add('fa-moon');
+        icon.classList.remove('fa-sun','text-yellow-500');
+        icon.classList.add('fa-moon', 'text-gray-900');
       } else {
-        icon.classList.remove('fa-moon');
-        icon.classList.add('fa-sun');
+        icon.classList.remove('fa-moon', 'text-gray-900');
+        icon.classList.add('fa-sun','text-yellow-500');
       }
     }
 
@@ -23,25 +23,55 @@ function toggleTheme() {
     let isOpen = true;
 
     const myGuns = [
-      '(⌐■_■)–︻╦╤─',
-      '(☞ﾟ∀ﾟ)☞︻╦̵̵͇̿̿̿̿╤──',
-      '︻デ═一',
-      '▄︻̷̿┻̿═━一',
-      '╾━╤デ╦︻',
-      '( ͡° ͜ʖ ͡°)╭∩╮︻╦╤─',
-      '(▀̿Ĺ̯▀̿ ̿)︻̷̿┻̿═━一 BANG!',
-      '(╯°□°）╯︵ ┻━┻︻デ═一',
-      '(⌐■_■)–︻╦╤─ Pew Pew!',
-      "(ง'̀-'́)ง︻デ═一",
-      '(•_•) /︻╦̵̵͇̿̿̿̿╤──',
-      '(¬_¬")︻╦╤─'
-    ];
+  '(⌐■_■)–︻╦╤─',
+  '(☞ﾟ∀ﾟ)☞︻╦̵̵͇̿̿̿̿╤──',
+  '︻デ═一',
+  '▄︻̷̿┻̿═━一',
+  '╾━╤デ╦︻',
+  '( ͡° ͜ʖ ͡°)︻╦╤─',
+  '(▀̿Ĺ̯▀̿ ̿)︻̷̿┻̿═━一 BANG!',
+  '(╯°□°）╯︵ ┻━┻︻デ═一',
+  '(⌐■_■)–︻╦╤─ Pew Pew!',
+  "(ง'̀-'́)ง︻デ═一",
+  '(•_•) /︻╦̵̵͇̿̿̿̿╤──',
+  '(¬_¬")︻╦╤─',
+  '(¬‿¬)︻╦╤─ Pew',
+  '(°ロ°)☝︻╦̵̵͇̿̿̿̿╤──',
+  '(☞ຈل͜ຈ)☞︻デ═一 Pew Pew',
+  'ヽ༼ ಠ益ಠ ༽ﾉ︻╦╤─ - FIRE!',
+  '＼(ﾟｰﾟ＼)︻╦╤─ Pew!',
+  '(ง ͠° ͟ل͜ ͡°)ง︻デ═一',
+  'ヽ( ͝° ͜ʖ͡°)ﾉ︻╦̵̵͇̿̿̿̿╤── Pew',
+  'ಠ_ಠ︻デ═一',
+  '(ʘ‿ʘ)╾━╤デ╦︻ Pew',
+  'ᕙ(⇀‸↼‶)ᕗ︻╦̵̵͇̿̿̿̿╤──',
+  '(ಥ﹏ಥ)︻╦╤─ Pew...',
+  '(ノಠ益ಠ)ノ彡︻╦╤─ Pew Pew!',
+  'ლ(ಠ益ಠლ)︻デ═一',
+  '(ง°ل͜°)ง︻╦̵̵͇̿̿̿̿╤── Boom',
+];
+
+const gunSounds = [
+  new Audio('gunSound/cinematic-gun.mp3'),
+  new Audio('gunSound/plasma-gun-fire.mp3'),
+  new Audio('gunSound/gun-fire1.mp3'),
+  new Audio('gunSound/laser-gun.mp3'),
+  new Audio('gunSound/laser-gun2.mp3'),
+  new Audio('gunSound/single-gun-shot.mp3'),
+  new Audio('gunSound/ray-gun.mp3'),
+  new Audio('gunSound/grapping-gun.mp3'),
+]
+
 
     
     button.addEventListener('click', () => {
+      const randomSound = gunSounds[Math.floor(Math.random() * gunSounds.length)];
+    
        const emoji = button.querySelector('.emoji');
       const symbol = button.querySelector('.emoji-symbol');
         if (isOpen) {
+
+          randomSound.play();
           
           ///|\ ^._.^ /|\ Shrink lines
           hLine.classList.replace('w-full', 'w-0');
