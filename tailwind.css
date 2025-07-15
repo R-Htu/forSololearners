@@ -70,11 +70,11 @@
   */
   
   .img-wrapper {
-    @apply w-full rounded-lg shadow-lg object-cover my-10 flex justify-center items-center py-10; 
+    @apply w-full rounded-lg shadow-lg object-cover my-10 flex justify-center items-center py-20; 
   }
 
   .streak-img {
-    @apply w-[70%] h-auto;
+    @apply w-[70%] h-auto transition-all duration-700 rounded opacity-100;
   }
 
 }
