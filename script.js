@@ -93,7 +93,7 @@ const myGuns = [
     'images/first.jpg',
     'images/second.jpg',
     'images/third.jpg',
-    'images/fourth.jpg',
+    'images/fouth.jpg',
     'images/fifth.jpg',
     'images/sixth.jpg',
     'images/seventh.jpg'
@@ -174,7 +174,59 @@ streakBtn.addEventListener('click',() => {
   sliderImg.src = images[currentIndex];
   sliderWrapper.classList.remove('hidden');
   sliderWrapper.classList.add('opacity-100');
-})
+});
+
+let startY = 0;
+
+sliderImg.addEventListener('touchstart', (e)=> {
+  startY = e.touches[0].clientY;
+});
+
+sliderImg.addEventListener('touchend', (e)=> {
+  const endY = e.changedTouches[0].clientY;
+  const distance = startY - endY;
+
+  if (distance > 50) {
+    slideNextImage();
+  }
+});
+
+sliderImg.addEventListener('mousedown', (e)=> {
+  startY = e.clientY;
+});
+
+sliderImg.addEventListener('mouseup', (e)=> {
+  const endY = e.clientY;
+  const distance = slideNextImage();
+
+  if (distance > 50) {
+    slideNextImage();
+  }
+});
+
+const slideNextImage =  () => {
+  sliderImg.classList.add('opacity-0', '-translate-y-10');
+
+  setTimeout(() => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      sliderWrapper.classList.add('hidden');
+      sliderImg.classList.remove('-translate-y-10','opacity-0')
+      return;
+    }
+
+    sliderImg.src = images[currentIndex];
+    sliderImg.classList.remove('-translate-y-10');
+    sliderImg.classList.add('translate-y-10');
+
+    setTimeout(()=>{
+      sliderImg.classList.remove('opacity-0');
+      sliderImg.classList.remove('translate-y-10');
+      sliderImg.classList.add('opacity-100');
+    }, 50);
+  }, 500);
+
+}
 
    
 /* 
@@ -202,26 +254,7 @@ leafBtn.addEventListener('click', ()=> {
   
 })
 
-/*leafBtn.addEventListener('click', () => {
-  document.body.classList.remove(
-    'bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]',
-    'bg-cover',
-    'bg-center',
-    'min-h-screen',
-    'rounded-lg',
-    'shadow-lg'
-  );
 
-  document.body.classList.add(
-    'bg-[linear-gradient(rgba(255,77,0,0.4),rgba(252,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]',
-    'bg-cover',
-    'bg-center',
-    'min-h-screen',
-    'rounded-lg',
-    'shadow-lg'
-  );
-});
-*/
 
 
 

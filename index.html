@@ -23,6 +23,10 @@
         <button style="padding: 10px;" id="leafBtn" class="text-2xl">
           <span id="leafIcon">🍀</span>
         </button>
+
+        <div id="sliderWrapper" class="img-wrapper season-bg spring-mode hidden">
+          <img id="sliderImage" class="streak-img" src="" alt="Bug hunter" title="choose bug hunter">
+        </div>
         
         <!-- 	( ✜︵✜ )You might already know how to keep your daily streak without any effort. :) This is how I do it, hehe. -->
 
@@ -32,7 +36,7 @@
           title="Toggle plus sign"
           data-streak="streak"
         > 
-          <span class="emoji-symbol theme-text">一═デ︻☜(ຈل͜ຈ☜)</span>
+          <span class="emoji-symbol theme-text">一═デ︻☜</span>
           <span class="emoji hidden theme-text"></span>
           <!-- ᕦ( ͡° ͜ʖ ͡°)ᕤ Horizontal line -->
           <div class="hor-line w-full"></div>
@@ -120,11 +124,9 @@
         ===========================
       -->
 
-      <section class="season-bg spring-mode relative transition-opacity duration-700 w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
+      <section class=" absolute top-10 z-9999 w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
 
-        <div id="sliderWrapper" class="img-wrapper hidden relative season-bg spring-mode">
-          <img id="sliderImage" class="streak-img" src="" alt="Bug hunter" title="choose bug hunter">
-        </div>
+
      <!--   <div id="secondImageDiv" class="img-wrapper season-bg spring-mode">
           <img class="streak-img" src="images/second.jpg" alt="Bug hunter" title="choose your hunting ground">
         </div>
