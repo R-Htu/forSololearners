@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+
+  /* 
+  =====================================
+         
+    ─╤̵̵͇̿̿̿̿╦︻☜(ﾟ∀ﾟ☜)Season mode
+  =====================================
+*/
+
   .spring-mode {
     @apply  bg-[linear-gradient(rgba(0,90,0,0.4),rgba(0,0,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg')]
             bg-cover bg-center min-h-screen
@@ -14,8 +22,14 @@
            bg-cover bg-center min-h-screen rounded-lg shadow-lg;
   }
 
+    /*
+    =====================================
+      ─╤╦︻–(■_■⌐)Button / hori/vertical section 
+    =====================================
+  */
+
   .btn-responsive {
-    @apply w-[33%]
+    @apply w-[35%]
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
             text-black font-bold bg-white
            dark:bg-[rgba(0,0,0,0.7)] dark:text-white
@@ -28,7 +42,7 @@
 
   .hor-line {
     @apply absolute h-4 bg-gray-700 
-           dark:bg-gray-300
+           dark:bg-gray-800
            dark:opacity-50
            top-1/2 left-0 origin-center 
            transition-all duration-500 
@@ -36,9 +50,9 @@
            
   }
 
-.ver-line {
+  .ver-line {
     @apply absolute w-4 bg-gray-700 
-           dark:bg-gray-300
+           dark:bg-gray-800
            dark:opacity-50
            top-0 left-1/2 -translate-x-1/2 
            origin-center transition-all 
@@ -47,7 +61,20 @@
 
   .theme-text {
     @apply text-base md:text-lg lg:text-xl;
-}
+  }
 
+  /*
+  =====================================
+        ─╤╦︻( ͡° ͜ʖ͡°) Sololearn image section 
+  =====================================
+  */
+  
+  .img-wrapper {
+    @apply w-full rounded-lg shadow-lg object-cover my-10 flex justify-center items-center py-10; 
+  }
+
+  .streak-img {
+    @apply w-[70%] h-auto;
+  }
 
 }

@@ -554,13 +554,6 @@ video {
   display: none;
 }
 
-/* 
-  =====================================
-         
-    ─╤̵̵͇̿̿̿̿╦︻☜(ﾟ∀ﾟ☜)Season mode
-  =====================================
-*/
-
 .spring-mode {
   min-height: 100vh;
   border-radius: 0.5rem;
@@ -583,14 +576,8 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/*
-    =====================================
-      ─╤╦︻–(■_■⌐)Button / hori/vertical section 
-    =====================================
-  */
-
 .btn-responsive {
-  width: 35%;
+  width: 33%;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -626,7 +613,7 @@ video {
 }
 
 .btn-responsive:hover:is(.dark *) {
-  background-color: rgba(250,250,250,0.8);
+  background-color: rgba(50,50,250,0.8);
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
@@ -647,12 +634,6 @@ video {
   transition-duration: 500ms;
 }
 
-.hor-line:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
-  opacity: 0.5;
-}
-
 .ver-line {
   position: absolute;
   top: 0px;
@@ -667,12 +648,6 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-}
-
-.ver-line:is(.dark *) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
-  opacity: 0.5;
 }
 
 .theme-text {
@@ -692,34 +667,6 @@ video {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-}
-
-/*
-  =====================================
-        ─╤╦︻( ͡° ͜ʖ͡°) Sololearn image section 
-  =====================================
-  */
-
-.img-wrapper {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.5rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.streak-img {
-  height: auto;
-  width: 70%;
 }
 
 .absolute {
@@ -753,11 +700,6 @@ video {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .mt-10 {
@@ -794,10 +736,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.max-w-5xl {
-  max-width: 64rem;
 }
 
 .-translate-x-1\/2 {

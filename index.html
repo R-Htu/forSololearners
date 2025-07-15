@@ -10,8 +10,8 @@
 </head>
 <body class="season-bg spring-mode text-white bg-white dark:bg-black dark:text-white">
 
-    <div class="season-bg spring-mode px-4">
-      <div class="season-bg spring-mode relative w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
+    <main class="season-bg spring-mode px-4 mx-auto my-0 max-w-5xl">
+      <section class="season-bg spring-mode relative w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
 
         <button style="padding: 10px;" onclick="toggleTheme()" id="iconBtn" class="text-2xl ">
           <i class="fa-solid fa-moon text-black"></i>
@@ -21,13 +21,15 @@
           <span id="leafIcon">🍀</span>
         </button>
         
-        <!-- 	( ✜︵✜ ) Do you know that????????????????????????-->
+        <!-- 	( ✜︵✜ )You might already know how to keep your daily streak without any effort. :) This is how I do it, hehe. -->
+
         <button 
           class="btn-responsive absolute left-[50%] -translate-x-1/2 transform mt-10"
           aria-pressed="true"
           title="Toggle plus sign"
+          data-streak="streak"
         > 
-          <span class="emoji-symbol theme-text">(¬_¬")︻╦╤─</span>
+          <span class="emoji-symbol theme-text">Pew Pew 一═デ︻☜(ຈل͜ຈ☜)</span>
           <span class="emoji hidden theme-text"></span>
           <!-- ᕦ( ͡° ͜ʖ ͡°)ᕤ Horizontal line -->
           <div class="hor-line w-full"></div>
@@ -41,7 +43,7 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	※\(^o^)/※</span>
+          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	─╤╦︻( ͡° ͜ʖ͡°)</span>
           <span class="emoji hidden text-base md:text-lg lg:text-xl"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
@@ -54,7 +56,7 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol theme-text">	▄︻̷̿┻̿═━一</span>
+          <span class="emoji-symbol theme-text">─╤╦︻–(■_■⌐)</span>
           <span class="emoji hidden theme-text"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
@@ -66,7 +68,7 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	L(° O °L)</span>
+          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	──╤̵̵͇̿̿̿̿╦︻☜(ﾟ∀ﾟ☜)</span>
           <span class="emoji hidden text-base md:text-lg lg:text-xl"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
@@ -78,7 +80,7 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol text-base md:text-lg lg:text-xl">		ಠ_ಠ︻デ═一</span>
+          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	一═デ︻ง(°͟ل͜°͠ ง)</span>
           <span class="emoji hidden text-base md:text-lg lg:text-xl"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
@@ -90,7 +92,7 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol text-base md:text-lg lg:text-xl">		(☞ﾟヮﾟ)☞</span>
+          <span class="emoji-symbol text-base md:text-lg lg:text-xl">	一═デ︻ง(ง̀-́’)</span>
           <span class="emoji hidden text-base md:text-lg lg:text-xl"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
@@ -102,19 +104,52 @@
             aria-pressed="true"
             title="Toggle plus sign"
           >  
-          <span class="emoji-symbol text-base md:text-lg lg:text-xl">(╯°□°）╯︵ ┻━┻︻デ═一</span>
+          <span class="emoji-symbol text-base md:text-lg lg:text-xl">─╤̵̵͇̿̿̿̿╦︻ \\(•_•)</span>
           <span class="emoji hidden text-base md:text-lg lg:text-xl"></span>
           <div class="hor-line w-full"></div>
           <div class="ver-line h-full"></div>
         </button>
-      </div>
+      </section>
+
+      <!-- 
+        ===========================
+          Sololearn Image section  
+        ===========================
+      -->
+
+      <section class="season-bg spring-mode relative w-[97%] lg:w-[60%] md:w-[80%] mx-auto">
+
+        <div id="firstImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/first.jpg" alt="Bug hunter" title="choose bug hunter">
+        </div>
+        <div id="secondImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/second.jpg" alt="Bug hunter" title="choose your hunting ground">
+        </div>
+        <div id="thirdImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/third.jpg" alt="Bug hunter" title="I chose Python">
+        </div>
+        <div id="fouthImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/fouth.jpg" alt="Bug hunter" title="Can you see the bug?">
+        </div>
+        <div id="fifthImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/fifth.jpg" alt="Bug hunter" title="choose your hunting ground">
+        </div>
+        <div id="sixthImageDiv" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/sixth.jpg" alt="Bug hunter" title="I chose Python">
+        </div>
+        <div id="seventh" class="img-wrapper season-bg spring-mode">
+          <img class="streak-img" src="images/seventh.jpg" alt="Bug hunter" title="Can you see the bug?">
+        </div>
+      </section>
+
+
 
       
    
       
 
         
-    </div>
+    </main>
     <script src="script.js"></script>
 
 </body>
