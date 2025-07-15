@@ -90,6 +90,7 @@ const myGuns = [
   ];
 
  images = [
+    'images/instruction.jpg',
     'images/first.jpg',
     'images/second.jpg',
     'images/third.jpg',
