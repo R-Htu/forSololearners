@@ -12,13 +12,13 @@
 */
 
   .spring-mode {
-    @apply  bg-[linear-gradient(rgba(0,90,0,0.4),rgba(0,0,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg')]
+    @apply  bg-[linear-gradient(rgba(0,15,0,0.4),rgba(0,90,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg')]
             bg-cover bg-center min-h-screen
             rounded-lg shadow-lg;
   }
 
   .autumn-mode {
-    @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(220,125,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
+    @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(110,15,5,0.4),rgba(65,80,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
            bg-cover bg-center min-h-screen rounded-lg shadow-lg;
   }
 
@@ -29,7 +29,7 @@
   */
 
   .btn-responsive {
-    @apply w-[35%]
+    @apply w-[35%] border-2 border-[rgba(0,0,30,0.7)]
            shadow-[-4px_4px_10px_rgba(0,0,0,0.2)] 
             text-black font-bold bg-white
            dark:bg-[rgba(0,0,0,0.7)] dark:text-white
@@ -41,8 +41,8 @@
   }
 
   .hor-line {
-    @apply absolute h-4 bg-gray-700 
-           dark:bg-gray-800
+    @apply absolute h-4 dark:bg-yellow-300 
+           bg-green-800
            dark:opacity-50
            top-1/2 left-0 origin-center 
            transition-all duration-500 
@@ -51,8 +51,8 @@
   }
 
   .ver-line {
-    @apply absolute w-4 bg-gray-700 
-           dark:bg-gray-800
+    @apply absolute w-4 dark:bg-yellow-500 
+           bg-green-950
            dark:opacity-50
            top-0 left-1/2 -translate-x-1/2 
            origin-center transition-all 

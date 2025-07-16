@@ -564,7 +564,7 @@ video {
 .spring-mode {
   min-height: 100vh;
   border-radius: 0.5rem;
-  background-image: linear-gradient(rgba(0,90,0,0.4),rgba(0,0,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg');
+  background-image: linear-gradient(rgba(0,15,0,0.4),rgba(0,90,0,0.4)),url('https://clipground.com/images/green-leaves-background-clipart-15.jpg');
   background-size: cover;
   background-position: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -575,7 +575,7 @@ video {
 .autumn-mode {
   min-height: 100vh;
   border-radius: 0.5rem;
-  background-image: linear-gradient(rgba(100,77,0,0.4),rgba(220,125,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
+  background-image: linear-gradient(rgba(100,77,0,0.4),rgba(110,15,5,0.4),rgba(65,80,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
   background-size: cover;
   background-position: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -592,6 +592,8 @@ video {
 .btn-responsive {
   width: 35%;
   border-radius: 0.25rem;
+  border-width: 2px;
+  border-color: rgba(0,0,30,0.7);
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
   font-weight: 700;
@@ -640,7 +642,7 @@ video {
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+  background-color: rgb(22 101 52 / var(--tw-bg-opacity, 1));
   opacity: 0.9;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -649,7 +651,7 @@ video {
 
 .hor-line:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
   opacity: 0.5;
 }
 
@@ -662,7 +664,7 @@ video {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
+  background-color: rgb(5 46 22 / var(--tw-bg-opacity, 1));
   opacity: 0.9;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -671,7 +673,7 @@ video {
 
 .ver-line:is(.dark *) {
   --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity, 1));
   opacity: 0.5;
 }
 
@@ -803,8 +805,8 @@ video {
   width: 100%;
 }
 
-.max-w-5xl {
-  max-width: 64rem;
+.max-w-screen-xl {
+  max-width: 1280px;
 }
 
 .-translate-x-1\/2 {
@@ -829,11 +831,6 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .text-2xl {
