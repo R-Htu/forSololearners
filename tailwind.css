@@ -18,7 +18,7 @@
   }
 
   .autumn-mode {
-    @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(200,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
+    @apply bg-[linear-gradient(rgba(100,77,0,0.4),rgba(220,125,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg")]
            bg-cover bg-center min-h-screen rounded-lg shadow-lg;
   }
 

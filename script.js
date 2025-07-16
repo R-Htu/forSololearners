@@ -1,6 +1,6 @@
 /* 
 ===========================================
-    dark/light mode section 
+   💣 dark/light mode section 
 ===========================================
 */
 
@@ -9,7 +9,7 @@ function toggleTheme() {
       const icon = document.querySelector('#iconBtn i');
       const isDark = html.classList.contains('dark');
 
-      //	(ㆆ _ ㆆ) Toggle the dark class on <html>
+      //	(ㆆ _ ㆆ) Toggle the dark class o <nhtml>
       html.classList.toggle('dark');
 
       // ☜(⌒▽⌒)☞ Change the icon
@@ -27,6 +27,16 @@ function toggleTheme() {
     🔫 Gun Section & Horizontal/Vertical Lines 
 ===========================================
 */
+const gunSounds = [
+      new Audio('gunSound/cinematic-gun.mp3'),
+      new Audio('gunSound/plasma-gun-fire.mp3'),
+      new Audio('gunSound/gun-fire1.mp3'),
+      new Audio('gunSound/laser-gun.mp3'),
+      new Audio('gunSound/laser-gun2.mp3'),
+      new Audio('gunSound/single-gun-shot.mp3'),
+      new Audio('gunSound/ray-gun.mp3'),
+      new Audio('gunSound/grappling-gun.mp3'),
+  ];
 
 const myGuns = [
       '(⌐■_■)–︻╦╤─',
@@ -77,19 +87,117 @@ const myGuns = [
       '─╤╦︻("¬_¬)'
     ];
 
-  
-  const gunSounds = [
-      new Audio('gunSound/cinematic-gun.mp3'),
-      new Audio('gunSound/plasma-gun-fire.mp3'),
-      new Audio('gunSound/gun-fire1.mp3'),
-      new Audio('gunSound/laser-gun.mp3'),
-      new Audio('gunSound/laser-gun2.mp3'),
-      new Audio('gunSound/single-gun-shot.mp3'),
-      new Audio('gunSound/ray-gun.mp3'),
-      new Audio('gunSound/grappling-gun.mp3'),
-  ];
+document.querySelectorAll('.btn-responsive').forEach(button => {
+  const hLine = button.querySelector('.hor-line');
+  const vLine = button.querySelector('.ver-line');
+  let isOpen = true;
 
- images = [
+  button.addEventListener('click', () => {
+    const randomSound = gunSounds[Math.floor(Math.random() * gunSounds.length)];
+    const emoji = button.querySelector('.emoji');
+    const symbol = button.querySelector('.emoji-symbol');
+    symbol.classList.add('hidden');
+
+    if (isOpen) {
+      symbol.classList.add('hidden');
+      randomSound.play();
+
+      hLine.classList.replace('w-full', 'w-0');
+      vLine.classList.replace('h-full', 'h-0');
+
+      emoji.classList.remove('hidden');
+      emoji.style.display = "inline-block";
+
+      // 🤍 Reset rotation instantly and force reflow
+      emoji.style.transition = "none";
+      emoji.style.transform = "rotate(0deg)";
+      emoji.style.zIndex = '20';
+      emoji.offsetWidth;
+
+      // 👁️‍🗨️👁️‍🗨️Animate rotation
+      emoji.style.transition = "transform 0.6s ease";
+      emoji.style.transform = "rotate(1080deg)";
+ 
+      // 👁️‍🗨️👁️‍🗨️Get emoji's position relative to viewport and page
+      const rect = emoji.getBoundingClientRect();
+      const startX = rect.left + window.scrollX + emoji.offsetWidth /  2;
+      const startY = rect.top + window.scrollY + emoji.offsetHeight / 2;
+
+      const baseAngle = Math.random() * 720;
+
+      for (let i = 0; i < 6; i++) {
+        const smoke = document.createElement('span');
+        smoke.classList.add('smoke', 'absolute', 'text-sm');
+        smoke.textContent = '💨💥';
+      
+
+        // 💡Position at center
+        smoke.style.left = `${startX}px`;
+        smoke.style.top = `${startY}px`;
+        smoke.style.zIndex = '40';
+
+        document.body.appendChild(smoke);
+
+        const angleDeg = baseAngle + i * 60;
+        const angleRad = angleDeg * Math.PI / 180;
+        const offsetX = Math.cos(angleRad) * 150;
+        const offsetY = Math.sin(angleRad) * 150;
+
+        let startTime = null;
+        const duration = 1500;
+
+        function animateSmoke(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / duration, 1.5);
+
+          const currentX = startX + offsetX * progress;
+          const currentY = startY + offsetY * progress;
+          smoke.style.left = `${currentX}px`;
+          smoke.style.top = `${currentY}px`;
+          smoke.style.opacity = `${1 - progress}`;
+
+          if (progress < 1.5) {
+            requestAnimationFrame(animateSmoke);
+          } else {
+            smoke.remove();
+          }
+        }
+
+      requestAnimationFrame(animateSmoke);
+}
+
+
+      
+      emoji.textContent = myGuns[Math.floor(Math.random() * myGuns.length)];
+
+      // 💃 Reset emoji rotation after animation completes
+      const resetSpin = () => {
+        emoji.style.transition = "none";
+        emoji.style.transform = "rotate(0deg)";
+        emoji.offsetWidth;
+        emoji.style.transition = "transform 0.6s ease";
+        emoji.removeEventListener('transitionend', resetSpin);
+      };
+
+      emoji.addEventListener('transitionend', resetSpin);
+    } else {
+      hLine.classList.replace('w-0', 'w-full');
+      vLine.classList.replace('h-0', 'h-full');
+    }
+
+    button.setAttribute('aria-pressed', !isOpen);
+    isOpen = !isOpen;
+  });
+});
+
+/* 
+===========================================
+    💜💜Sololearn screenshot images
+===========================================
+*/
+
+const images = [
     'images/instruction.jpg',
     'images/first.jpg',
     'images/second.jpg',
@@ -99,71 +207,6 @@ const myGuns = [
     'images/sixth.jpg',
     'images/seventh.jpg'
 ];
-
-
-document.querySelectorAll('.btn-responsive').forEach(button => {
-  const hLine = button.querySelector('.hor-line');
-  const vLine = button.querySelector('.ver-line');
-  let isOpen = true;
-  
-  button.addEventListener('click', () => {
-
-      const randomSound = gunSounds[Math.floor(Math.random() * gunSounds.length)];
-      const emoji = button.querySelector('.emoji');
-      const symbol = button.querySelector('.emoji-symbol');
-      symbol.classList.add('hidden');
-
-      if (isOpen) {
-
-        symbol.classList.add('hidden');
-        randomSound.play();
-
-        hLine.classList.replace('w-full', 'w-0');
-        vLine.classList.replace('h-full','h-0');
-
-        emoji.classList.remove('hidden');
-        emoji.style.display = "inline-block";
-
-        // ʕノ•ᴥ•ʔノ ︵ ┻━┻ Reset rotation instantly and force reflow
-        emoji.style.transition = "none";
-        emoji.style.transform = "rotate(0deg)";
-        emoji.offsetWidth; 
-
-        //	ʕっ•ᴥ•ʔっ Then animate rotation to 360deg
-        emoji.style.transition = "transform 0.6s ease";
-        emoji.style.transform = "rotate(720deg)";
-
-        emoji.textContent = myGuns[Math.floor(Math.random() * myGuns.length)];
-
-        //	⤜(ⱺ ʖ̯ⱺ)⤏ When animation ends, reset rotation and unlock clicks
-        const resetSpin = () => {
-          emoji.style.transition = "none";
-          emoji.style.transform = "rotate(0deg)";
-          emoji.offsetWidth;
-          emoji.style.transition = "transform 0.6s ease";
-          emoji.removeEventListener('transitionend', resetSpin);
-          isAnimating = false;
-        };
-
-        emoji.addEventListener('transitionend', resetSpin);
-
-      } else {
-        
-        hLine.classList.replace('w-0','w-full');
-        vLine.classList.replace('h-0','h-full');
-
-      }
-
-      button.setAttribute('aria-pressed', !isOpen);
-      isOpen = !isOpen;
-    });  
-  });
-
-/* 
-===========================================
-    🍁🍀Sololearn screenshot images
-===========================================
-*/
 let currentIndex = 0;
 const img = document.getElementById('sliderImage');
 const sliderWrapper = document.getElementById('sliderWrapper');
@@ -175,32 +218,33 @@ streakBtn.addEventListener('click',() => {
   sliderImg.src = images[currentIndex];
   sliderWrapper.classList.remove('hidden');
   sliderWrapper.classList.add('opacity-100');
+  
 });
 
 let startY = 0;
 
 sliderImg.addEventListener('touchstart', (e)=> {
+  e.stopPropagation();
   startY = e.touches[0].clientY;
+  
 });
 
 sliderImg.addEventListener('touchend', (e)=> {
   const endY = e.changedTouches[0].clientY;
   const distance = startY - endY;
 
-  if (distance > 50) {
-    slideNextImage();
-  }
+  if (distance > 50) slideNextImage(); 
 });
 
 sliderImg.addEventListener('mousedown', (e)=> {
+  e.stopPropagation();
   startY = e.clientY;
 });
 
 sliderImg.addEventListener('mouseup', (e)=> {
   const endY = e.clientY;
-  const distance = slideNextImage();
-
-  if (distance > 50) {
+  const distance = startY - endY;
+  if (distance >= 0) {
     slideNextImage();
   }
 });
@@ -228,6 +272,13 @@ const slideNextImage =  () => {
   }, 500);
 
 }
+
+sliderWrapper.addEventListener('touchstart', ()=>{
+  sliderWrapper.classList.add('hidden')
+});
+sliderWrapper.addEventListener('mousedown', ()=>{
+  sliderWrapper.classList.add('hidden')
+});
 
    
 /* 

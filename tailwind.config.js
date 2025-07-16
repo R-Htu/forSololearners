@@ -11,7 +11,8 @@ module.exports = {
   },
   safelist: [
     'sping-mode',
-    'autumn-mode'
+    'autumn-mode',
+    'animate-smokeMove',
   ],
   plugins: [],
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Gun Smoke with Tailwind</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom CSS needed for animation and CSS variables */
+    .gun-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #gun {
+      /* font-size and transition handled by Tailwind classes */
+      cursor: pointer;
+      transition: transform 0.6s ease;
+    }
+
+    .smoke {
+      position: absolute;
+      font-size: 1.5rem;
+      opacity: 0;
+      animation: smokeMove 1s ease-out forwards;
+    }
+
+    @keyframes smokeMove {
+      0% {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <section class="text-center">
+    <h2 class="text-3xl mb-6">🔫 Gun Smoke Effect</h2>
+    <div class="gun-container justify-center">
+      <div id="gun" class="text-6xl select-none">🔫</div>
+    </div>
+  </section>
+
+  <script>
+    const gun = document.getElementById('gun');
+    let angle = 0;
+
+    gun.addEventListener('click', () => {
+      angle += 720;
+      gun.style.transform = `rotate(${angle}deg)`;
+
+      for (let i = 0; i < 6; i++) {
+        const smoke = document.createElement('div');
+        smoke.className = 'smoke';
+        smoke.textContent = '💨';
+
+        const degree = i * 60;
+        const radian = degree * Math.PI / 180;
+
+        const x = Math.cos(radian) * 100;
+        const y = Math.sin(radian) * 100;
+
+        smoke.style.setProperty('--x', `${x}px`);
+        smoke.style.setProperty('--y', `${y}px`);
+        smoke.style.left = `30px`;
+        smoke.style.top = `-10px`;
+
+        gun.parentElement.appendChild(smoke);
+
+        setTimeout(() => smoke.remove(), 1000);
+      }
+    });
+  </script>
+</body>
+</html>

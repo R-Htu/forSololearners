@@ -575,7 +575,7 @@ video {
 .autumn-mode {
   min-height: 100vh;
   border-radius: 0.5rem;
-  background-image: linear-gradient(rgba(100,77,0,0.4),rgba(200,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
+  background-image: linear-gradient(rgba(100,77,0,0.4),rgba(220,125,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
   background-size: cover;
   background-position: center;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -753,10 +753,6 @@ video {
   right: 1.75rem;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
 .top-80 {
   top: 20rem;
 }
@@ -795,10 +791,6 @@ video {
   height: 100%;
 }
 
-.min-h-screen {
-  min-height: 100vh;
-}
-
 .w-0 {
   width: 0px;
 }
@@ -834,29 +826,9 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-\[linear-gradient\(rgba\(0\2c 0\2c 0\2c 0\.4\)\2c rgba\(0\2c 0\2c 0\2c 0\.4\)\)\2c url\(\"https\:\/\/clipground\.com\/images\/green-leaves-background-clipart-15\.jpg\"\)\] {
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
-}
-
-.bg-\[linear-gradient\(rgba\(255\2c 77\2c 0\2c 0\.4\)\2c rgba\(252\2c 5\2c 5\2c 0\.4\)\)\2c url\(\"https\:\/\/clipground\.com\/images\/green-leaves-background-clipart-15\.jpg\"\)\] {
-  background-image: linear-gradient(rgba(255,77,0,0.4),rgba(252,5,5,0.4)),url("https://clipground.com/images/green-leaves-background-clipart-15.jpg");
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .px-4 {
@@ -872,6 +844,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-black {
@@ -894,18 +871,12 @@ video {
   color: rgb(234 179 8 / var(--tw-text-opacity, 1));
 }
 
-.opacity-100 {
-  opacity: 1;
-}
-
 .opacity-0 {
   opacity: 0;
 }
 
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.opacity-100 {
+  opacity: 1;
 }
 
 .transition {
